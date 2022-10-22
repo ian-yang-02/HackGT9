@@ -6,7 +6,19 @@
     "author": "Ian Yang, Kristin Hsu, Lina Rhazi",
     "action":{
         "default_popup": "index.html",
-        "default_title": "red flag?",
-        "default_icon": 
-    }
+        "default_title": "red flag?"
+    },
+    "background": "background.html",
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+          "js": ["scripts/content.js"],
+          "matches": [
+            "https://developer.chrome.com/docs/extensions/*",
+            "https://developer.chrome.com/docs/webstore/*"
+          ]
+        }
+      ]
 }
