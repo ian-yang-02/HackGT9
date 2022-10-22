@@ -1,0 +1,12 @@
+{
+    "name": "red flag?",
+    "version": "1.0.0",
+    "description": "Is this company a red flag?",
+    "manifest_version": 3,
+    "author": "Ian Yang, Kristin Hsu, Lina Rhazi",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "red flag?",
+        "default_icon": 
+    }
+}
