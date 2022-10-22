@@ -33,7 +33,7 @@
     </header>
 
     <div class="container mt-3" style="height: 420px; width: 400px;" id="header">
-        <h4 class="text-center">this company receives a:</h4>
+        <h4 class="text-center">this company is</h4>
         <h4 class="text-center">similar sites that we approve:</h4>
 
         </PHP 
