@@ -11,7 +11,7 @@
 body {
   font-family: "Cooper Black", serif;
   color: #fff;
-  background: url("../img/bg.jpg") top center no-repeat;
+  background: #ffd6e7; /*url("../img/bg.jpg") top center no-repeat;*/
   background-size: cover;
   position: relative;
   text-shadow: 2px 2px #ff0000;
@@ -24,7 +24,7 @@ body::before {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(49, 71, 89, 0.6);
+  background: #ffd6e7;
 }
 
 @media (min-width: 1024px) {
