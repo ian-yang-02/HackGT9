@@ -11,16 +11,8 @@ function getCurrentTabUrl(callback) {
 ;     tmp.href = tab.url;
       url = tmp.hostname;
       var numPeriods = (url.split(".").length - 1);
-/*      if (tab.url.includes(".com")) {
-        url = tab.url.split(".com")[0];
-      } else if (tab.url.includes(".org")) {
-        url = tab.url.split(".org")[0];
-      } else if (tab.url.includes(".net")) {
-        url = tab.url.split(".net")[0];
-      } else {
-        url = tab.url;
-      }
-      */
+
+      
       if (numPeriods === 3) {
         url = url.split(".")[1];
         url = url.split(".")[1];
@@ -31,14 +23,8 @@ function getCurrentTabUrl(callback) {
       } else {
         url = url.split(".")[0];
       }
-      /*
-      else {
-        url = url.split("//")[1];
-      }
 
-      if (url.includes("us.")) {
-        url = url.split("us.")[1];
-      }*/
+
       callback(url);
     });
   }
