@@ -41,8 +41,22 @@ function getCurrentTabUrl(callback) {
   });
 
   function checkForEthics(siteUrl) {
-    if (websites_to_check.includes(siteUrl)) {
-      document.getElementById('recommendations').textContent = websites_to_recommend[0];
+    if (siteUrl in websites_to_check) {
+      document.getElementById('heres-why').textContent = "here's why:"
+      for (let i = 0; i < 4; i++) {
+        var tbodyRef = document.getElementById('bad-reasons').getElementsByTagName('tbody')[0];
+
+        // Insert a row at the end of table
+        var newRow = tbodyRef.insertRow();
+
+        // Insert a cell at the end of the row
+        var newCell = newRow.insertCell();
+
+        // Append a text node to the cell
+        var newText = document.createTextNode(websites_to_check[siteUrl][0][i]);
+        newCell.appendChild(newText);
+      }
+      document.getElementById('recommendations').textContent = websites_to_check[siteUrl][1];
       document.getElementById('recommendations').style.fontStyle = "italic";
     } else {
       document.getElementById('ethics').textContent = "approved";
@@ -73,68 +87,68 @@ function getCurrentTabUrl(callback) {
     });
 })*/
 
-const websites_to_check = [
-  "monsanto",
-  "nestle",
-  "bp",
-  "facebook",
-  "bayer",
-  "amazon",
-  "db",
-  "hsbc",
-  "coca-cola",
-  "google",
-  "costco",
-  "popeyes",
-  "chickfila",
-  "apple",
-  "shein",
-  "nike",
-  "tencent",
-  "activision",
-  "comcast",
-  "peta",
-  "cargill",
-  "koch",
-  "conagra",
-  "conrteva",
-  "pfizer",
-  "walmart",
-  "twitter",
-  "disney",
-  "att",
-  "jnj",
-  "tesla",
-  "hugoboss",
-  "boohoo",
-  "forever21",
-  "zara",
-  "hm",
-  "victoriassecret",
-  "mango",
-  "urbanoutfitters",
-  "primark",
-  "missguided",
-  "fashionnova",
-  "americaneagle",
-  "uniqlo",
-  "romwe",
-  "zaful",
-  "hottopic",
-  "cos",
-  "dillards",
-  "familydollar",
-  "childrensplace",
-  "regmovies",
-  "mcdonalds",
-  "belk",
-  "sears",
-  "kroger",
-  "hollister",
-  "gap",
-  "cvs",
-  "kmart"
-]
+const websites_to_check = {
+  "monsanto": [],
+  "nestle": [["slave labor", "child labor", "harms environment", "water thieves"], ["Earth's Best Organic"]],
+  "bp": [["unsafe workspace", "harms environment"],["Z energy"]],
+  "facebook": [["electricity usage", "tax avoidance", "real-name user requirement policies", "censorship policies", "mishandling of user data"],["Reddit"]],
+  "bayer": [["false advertisement"], []],
+  "amazon": [["misleading reviews", "poor working conditions", "product scams", "tax avoidance", "worker exploitation", "animal testing", "harms environment", "controversial technologies"],[]],
+  "db": [],
+  "hsbc": [],
+  "coca-cola": [],
+  "google": [],
+  "costco": [],
+  "popeyes": [],
+  "chickfila": [],
+  "apple": [],
+  "shein": [],
+  "nike": [],
+  "tencent": [],
+  "activision": [],
+  "comcast": [],
+  "peta": [],
+  "cargill": [],
+  "koch": [],
+  "conagra": [],
+  "conrteva": [],
+  "pfizer": [],
+  "walmart": [],
+  "twitter": [],
+  "disney": [],
+  "att": [],
+  "jnj": [],
+  "tesla": [],
+  "hugoboss": [],
+  "boohoo": [],
+  "forever21": [],
+  "zara": [],
+  "hm": [],
+  "victoriassecret": [],
+  "mango": [],
+  "urbanoutfitters": [],
+  "primark": [],
+  "missguided": [],
+  "fashionnova": [],
+  "americaneagle": [],
+  "uniqlo": [],
+  "romwe": [],
+  "zaful": [],
+  "hottopic": [],
+  "cos": [],
+  "dillards": [],
+  "familydollar": [],
+  "childrensplace": [],
+  "regmovies": [],
+  "mcdonalds": [],
+  "belk": [],
+  "sears": [],
+  "kroger": [],
+  "hollister": [],
+  "gap": [],
+  "cvs": [],
+  "kmart": []
+}
 
 const websites_to_recommend =[
   "abercrombie"
