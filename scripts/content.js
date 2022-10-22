@@ -44,23 +44,28 @@ function getCurrentTabUrl(callback) {
     if (siteUrl in websites_to_check) {
       document.getElementById('heres-why').textContent = "here's why:"
       for (let i = 0; i < 4; i++) {
-        var tbodyRef = document.getElementById('bad-reasons').getElementsByTagName('tbody')[0];
+        //var tbodyRef = document.getElementById('bad-reasons').getElementsByTagName('tbody')[0];
 
         // Insert a row at the end of table
-        var newRow = tbodyRef.insertRow();
+        //var newRow = tbodyRef.insertRow();
 
         // Insert a cell at the end of the row
-        var newCell = newRow.insertCell();
+        //var newCell = newRow.insertCell();
 
         // Append a text node to the cell
         var newText = document.createTextNode(websites_to_check[siteUrl][0][i]);
-        newCell.appendChild(newText);
+        //newCell.appendChild(newText);
+        document.getElementById('heres-why').textContent += ('\n' + websites_to_check[siteUrl][0][i]);
       }
       document.getElementById('recommendations').textContent = websites_to_check[siteUrl][1];
       document.getElementById('recommendations').style.fontStyle = "italic";
+      var redflag = document.getElementById('the-green-flag');
+      redflag.parentNode.removeChild(redflag);
     } else {
-      document.getElementById('ethics').textContent = "approved";
+      document.getElementById('ethics').textContent = "approved!";
       document.getElementById('ethics').style.fontStyle = "italic";
+      var theBar = document.getElementById('bottom-row');
+      theBar.parentNode.removeChild(theBar);
       var remove = document.getElementById('remove_or_not');
       remove.parentNode.removeChild(remove);
       var greenflag = document.getElementById('the-red-flag');
@@ -146,8 +151,8 @@ const websites_to_check = {
   "kroger": [],
   "hollister": [],
   "gap": [],
-  "cvs": [],
-  "kmart": []
+  "cvs": [["false advertisement", "lack of proper research", "worker exploitation"],[]],
+  "kmart": [["worker exploitation", "child labor", "poor working conditions"],[]]
 }
 
 const websites_to_recommend =[
