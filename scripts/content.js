@@ -42,12 +42,15 @@ function getCurrentTabUrl(callback) {
 
   function checkForEthics(siteUrl) {
     if (websites_to_check.includes(siteUrl)) {
-      document.getElementById('ethics').textContent = "bad";
       document.getElementById('recommendations').textContent = websites_to_recommend[0];
+      document.getElementById('recommendations').style.fontStyle = "italic";
     } else {
       document.getElementById('ethics').textContent = "approved";
+      document.getElementById('ethics').style.fontStyle = "italic";
       var remove = document.getElementById('remove_or_not');
       remove.parentNode.removeChild(remove);
+      var greenflag = document.getElementById('the-red-flag');
+      greenflag.parentNode.removeChild(greenflag);
     }
     
   }
