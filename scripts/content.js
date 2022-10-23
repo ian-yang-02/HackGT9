@@ -65,7 +65,6 @@ function getCurrentTabUrl(callback) {
   }
 
 const websites_to_check = {
-  "monsanto": [],
   "nestle": [["slave labor", "child labor", "harms environment", "water thieves"], ["Earth's Best Organic"]],
   "bp": [["unsafe workspace", "harms environment"],["Z energy"]],
   "facebook": [["electricity usage", "tax avoidance", "censorship policies", "mishandling of user data"],["Reddit"]],
@@ -88,7 +87,7 @@ const websites_to_check = {
   "cargill": [["contaminated meat"],["Mosa Meat"]],
   "koch": [],
   "conagra": [],
-  "conrteva": [],
+  "corteva": [],
   "pfizer": [],
   "walmart": [["hurts local communities", "foreign and child labor", "discrimination against women and workers with dissabilities"],["Trader Joe's"]],
   "twitter": [[],["Reddit"]],
