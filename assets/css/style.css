@@ -27,13 +27,6 @@ body::before {
   }
 }
 
-a {
-  color: #eee;
-  margin-bottom: 0px;
-  padding: 0px 0px;
-  font-size: 35px;
-}
-
 a:hover {
   color: #36d8c3;
   text-decoration: none;
@@ -44,7 +37,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+a {
   font-family: "Cooper Black", serif;
   text-shadow: 2px 2px #fff;
 }
@@ -186,6 +180,13 @@ h6 {
 }
 
 #lower h3 {
+  color: #ff0000;
+  margin-bottom: 50px;
+  padding: 0px 0px;
+  font-size: 25px;
+}
+
+#lower a {
   color: #ff0000;
   margin-bottom: 50px;
   padding: 0px 0px;

@@ -9,6 +9,9 @@
         "default_popup": "index.html",
         "default_title": "red flag?"
     },
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
     "permissions": [
         "activeTab",
         "tabs"
