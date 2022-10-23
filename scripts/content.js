@@ -93,7 +93,7 @@ const websites_to_check = {
   "conagra": [["harms environment", "worker exploitation"],["Island bakery"],["https://www.islandbakery.scot/the-island-bakery-story/"]],
   "corteva": [["deathly chemical use", "misleading information"],["Bayer"],["https://mosameat.com/"]],
   "pfizer": [["corrupt marketing practices", "lack of proper research"],["Eli Lilly and Co."],["https://www.lilly.com/"]],
-  "walmart": [["hurts local communities", "foreign and child labor", "discrimination against women and workers with dissabilities"],["Trader Joe's"],["https://www.traderjoes.com/home"]],
+  "walmart": [["child labor", "sex discrimination", "disability discrimination", "worker exploitation"],["Trader Joe's"],["https://www.traderjoes.com/home"]],
   "twitter": [["censorship policies", "mishandling of user data"],["Reddit"],["https://www.reddit.com/"]],
   "disney": [["anti-union stance", "slave labor", "worker exploitation", "lack of diversity"],["Woobles"],["https://thewoobles.com/"]],
   "tesla": [["unsafe workspace", "corrupt marketing practices", "worker exploitation", "harms environment"],["Audi"],["https://www.audiusa.com/us/web/en.html"]],
