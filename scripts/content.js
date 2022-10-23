@@ -46,7 +46,7 @@ function getCurrentTabUrl(callback) {
       redflag.parentNode.removeChild(redflag);
       document.getElementById('heres-why-prompt').textContent = "red flags:";
       document.getElementById('heres-why').textContent = "";
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 4 && i < websites_to_check[siteUrl][0].length; i++) {
         document.getElementById('heres-why').textContent += ('\n' + "● " + websites_to_check[siteUrl][0][i]);
       }
       document.getElementById('recommendations').textContent = websites_to_check[siteUrl][1];
