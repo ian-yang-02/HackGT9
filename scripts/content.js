@@ -44,9 +44,10 @@ function getCurrentTabUrl(callback) {
     if (siteUrl in websites_to_check) {
       var redflag = document.getElementById('the-green-flag');
       redflag.parentNode.removeChild(redflag);
-      document.getElementById('heres-why').textContent = "here's why:";
+      document.getElementById('heres-why-prompt').textContent = "red flags:";
+      document.getElementById('heres-why').textContent = "";
       for (let i = 0; i < 4; i++) {
-        document.getElementById('heres-why').textContent += ('\n' + websites_to_check[siteUrl][0][i]);
+        document.getElementById('heres-why').textContent += ('\n' + "● " + websites_to_check[siteUrl][0][i]);
       }
       document.getElementById('recommendations').textContent = websites_to_check[siteUrl][1];
       document.getElementById('recommendations').style.fontStyle = "italic";
