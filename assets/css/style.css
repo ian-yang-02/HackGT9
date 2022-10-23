@@ -98,7 +98,7 @@ h6 {
 #header {
   position: relative;
   width: 100%;
-  padding: 20px 0 0 0;
+  padding: 5px 0 0 0;
   text-align: center;
   /* countdown */
 }
@@ -120,24 +120,25 @@ h6 {
 #header .header-box {
   align-self: center;
   margin: 0 0 0 0;
+  border-bottom: 5px solid rgba(255, 255, 255, 0.29);
 }
 
 #lower .mini-red-flag {
   vertical-align: top;
   display: inline-block;
-  margin-left: 30px;
+  margin-left: 20px;
   margin-right: auto;
 }
 
 #lower .baddies-box {
   align-self: center;
   margin: 0 0 0 0;
+  padding-right: 25px;
 }
 
 .rounded {
   border-top: 5px solid #fff;
   border-radius: 5px;
-  text-shadow: 2px 2px #ff0000;
 }
 
 #header h1 {
@@ -153,7 +154,7 @@ h6 {
 #header h3 {
   color: #eee;
   margin-bottom: 0px;
-  padding: 0px 0px;
+  padding: 20px 0px 0px 0px;
   font-size: 40px;
 }
 
